@@ -1,0 +1,37 @@
+1. tambah data
+
+MariaDB [db_kasir]> insert into tbl_pegawai values('13','yanti','lumajang','2002-01-01')
+    -> ;
+Query OK, 1 row affected (0.07 sec)
+
+MariaDB [db_kasir]> insert into tbl_pegawai values('14','siti','jakarta','2003-01-01');
+Query OK, 1 row affected (0.09 sec)
+
+MariaDB [db_kasir]> insert into tbl_pegawai values('15','wahyu','banyuwangi','2004-01-01');
+Query OK, 1 row affected (0.09 sec)
+
+MariaDB [db_kasir]> insert into tbl_pegawai values('16','wahid','turen','2005-01-01');
+Query OK, 1 row affected (0.07 sec)
+
+MariaDB [db_kasir]> insert into tbl_pegawai values('17','herdi','surabaya','2006-01-01');
+Query OK, 1 row affected (0.07 sec)
+
+MariaDB [db_kasir]> insert into tbl_pegawai values('18','paul','bandung','2007-01-01');
+Query OK, 1 row affected (0.12 sec)
+
+MariaDB [db_kasir]> insert into tbl_pegawai values('19','fajar','malang','2008-01-01');
+Query OK, 1 row affected (0.07 sec)
+
+MariaDB [db_kasir]> insert into tbl_pegawai values('20','yusril','malang','2009-01-01');
+Query OK, 1 row affected (0.08 sec)
+
+2.Menampilkan umur anggota
+		Select *year(curdate())-year(tgl_lahir) as usia from tbl_pegawai;
+?Tampilkan anggota yang memiliki umur  dibawah 18 tahun dan lebih dari sama dengan 15
+		Select * from tbl_anggota where usia<’18’ and usia>=’15’;
+
+3. Menampilkan umur maksimum dari anggota
+	Select max(usia)from tbl_pegawai;
+
+
+
